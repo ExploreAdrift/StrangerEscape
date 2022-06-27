@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-namespace Finding_Will.Models;
+namespace StrangerEscape.Models;
 
 public class MyContext : DbContext 
 { 

@@ -1,10 +1,10 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Finding_Will.Models;
+using StrangerEscape.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Globalization;
 
-namespace Finding_Will.Controllers;
+namespace StrangerEscape.Controllers;
 
 public class LoginController : Controller
 {

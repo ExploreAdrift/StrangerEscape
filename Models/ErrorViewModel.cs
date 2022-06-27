@@ -1,4 +1,4 @@
-namespace Finding_Will.Models;
+namespace StrangerEscape.Models;
 
 public class ErrorViewModel
 {

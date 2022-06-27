@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Finding_Will.Models;
+using StrangerEscape.Models;
 
-namespace Finding_Will.Controllers;
+namespace StrangerEscape.Controllers;
 
 public class HomeController : Controller
 {

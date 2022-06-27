@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Finding_Will": {
+    "StrangerEscape": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

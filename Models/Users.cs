@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Finding_Will.Models;
+namespace StrangerEscape.Models;
 
 public class User 
 {

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Http;
-using Finding_Will.Models;
+using StrangerEscape.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
