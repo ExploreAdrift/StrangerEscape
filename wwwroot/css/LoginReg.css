@@ -1,0 +1,210 @@
+body,html {
+  background-image:url("wwwroot/css/img/letter-wall.jpg");
+  background-color: black;  
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+/* STRANGER THINGS LETTERING AND FORMATTING */
+
+.st{
+  
+  width: 650px;
+  margin: 6rem auto 3rem auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 8rem;
+  font-family: 'ITC Benguiat W01';
+  font-weight: 800;
+  color: #1c0502;
+  text-shadow: -0.05rem -0.05rem 1px #ed2b12,
+    0.05rem -0.05rem 1px #ed2b12,
+    -0.05rem 0.05rem 1px #ed2b12,
+    0.05rem 0.05rem 1px #ed2b12,
+    0 0 80px #630100,
+    0 0 20px #450100;
+  letter-spacing: -10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+
+}
+span:hover
+{
+  filter: blur(70px);
+  opacity: 0;
+}
+
+.st p {
+  display: inline-block;
+  margin: 0;
+  
+}
+
+.st-bound {
+  box-shadow: -0.05rem -0.05rem 2px #ed2b12,
+    0.05rem -0.05rem 2px #ed2b12,
+    -0.05rem 0.05rem 2px #ed2b12,
+    0.05rem 0.05rem 2px #ed2b12;
+  height: 5px;
+}
+
+.st-bound-full {
+  width: 110%;
+  margin: auto;
+  margin-bottom: -2.2rem;
+  max-width: 1300px;
+  margin-left: 0px;
+}
+
+.st-bound-mini {
+  margin-top: 0.6rem;
+}
+
+.st-bound-left {
+  float: left;
+  width: 95px;
+  position: relative;
+  left: -.3rem;
+  top: -1.5rem;
+}
+
+.st-bound-right {
+  float: right;
+  width: 103px;
+  left: 3.5rem;
+  position: relative;
+  top: -1.5rem;
+}
+
+.st-bottom {
+  clear: both;
+  top: -6.75rem;
+  position: relative;
+  left: 1rem;
+  letter-spacing: 0px;
+}
+
+.st-drop {
+  line-height: 0;
+  position: relative;
+  top: 1.55rem;
+}
+
+.st-stranger-s {
+  font-size: 10.5rem;
+  letter-spacing: -8px;
+}
+
+.st-stranger-t {
+  letter-spacing: 0;
+}
+
+.st-stranger-n {
+  letter-spacing: -5px;
+}
+
+.st-stranger-g {
+  letter-spacing: 0;
+}
+
+.st-stranger-r-2 {
+  font-size: 10.5rem;
+  right: 0.2rem;
+}
+
+.st-things-t {
+  font-size: 104%;
+  letter-spacing: 2px;
+}
+
+.st-things-n {
+  letter-spacing: -5px;
+}
+
+.st-things-g {
+  letter-spacing: -3px;
+}
+
+/* FLICKER ANIMATION */
+
+
+.flicker-slow{
+  animation: flicker 7s linear infinite;
+}
+
+.flicker-fast{
+  animation: flicker 1s linear infinite;
+}
+.flicker-medium{
+  animation: flicker 10s linear infinite;
+}
+
+.flicker-super-slow{
+  animation: flicker 15s linear infinite;
+}
+
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: .99;
+		
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+	}
+
+/* PARTICLES HITTING FULL SCREEN */
+
+
+}
+#particles-js{
+  height: fit-content;
+  margin-top: -450px;
+  
+  
+}
+
+@keyframes fadeIn{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* ATTRIBUTES FOR "a" TAGS */
+
+.tags{
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'ITC Benguiat W01';
+  color: #aa3432;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 21px;
+  animation: fadeIn 4s;
+  
+}
+
+.tags:hover
+{
+color: #ed2b12;
+font-size: 40px;
+transform: scale(1.5); 
+transition: transform 2s;
+cursor: pointer;
+}
+.tagsColor{
+  color: #ed2b12;
+  text-decoration: none;
+  font-size: 21px;
+  cursor: pointer;
+}
+.tagsColor:hover
+{
+  color: #ed2b12;
+  cursor: pointer;
+}
+
+
+   

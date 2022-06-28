@@ -1,0 +1,38 @@
+@model UserInLogin
+
+<head>
+    <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+
+</head>
+
+<body>
+    <div class="video-wrapper" style="transform: translateX(-25%);">
+        <video src="~/assets/Rain21.mp4" autoplay muted loop></video>
+        <div class=" d-flex mt-4 display-6 LoginMain fs-2">
+            <form asp-action="Access" asp-controller="LoginAndReg" method="POST">
+                <div class="mb-4 mt-4">
+                    <span asp-validation-for="LoginEmail"></span>
+                    <label asp-for="LoginEmail" class="flicker-medium">Email: </label>
+                    <input name="LoginEmail" class="form-control" asp-for="LoginEmail">
+                </div>
+                <div>
+                    <span asp-validation-for="LoginPassword"></span>
+                    <label asp-for="LoginPassword">Password: </label>
+                    <input name="LoginPassword" class="form-control" asp-for="LoginPassword">
+                </div>
+                <button class="btn btn-danger mt-4 mb-4" type="submit">ENTER</button>
+            </form>
+        </div>
+
+    </div>
+    <div class=" goHome text-center mt-4">
+        <a href="/" class="goHomeWord">GO HOME</a>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <audio src="~/assets/ScaryMIx.mp3" type="audio/mpeg" autoplay loop></audio>
+</body>

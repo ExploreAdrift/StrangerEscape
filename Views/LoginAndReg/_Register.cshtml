@@ -1,0 +1,60 @@
+@model User
+
+<head>
+    <link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
+
+</head>
+
+
+
+<body>
+
+
+    <div class="video-wrapper" style="transform: translateX(-25%);">
+        <video src="~/assets/Rain21.mp4" autoplay muted loop></video>
+
+        <div class=" d-flex RegisterMain justify-content-center">
+            <form asp-action="Register" asp-controller="LoginAndReg" method="POST" class="me-2">
+                <div class="mb-4 mt-5 display-6">
+                    <span asp-validation-for="FirstName"></span>
+                    <label asp-for="FirstName" class="form-label flicker-slow"></label>
+                    <input class="form-control" asp-for="FirstName">
+                </div>
+                <div class=" mb-4 display-6">
+                    <span asp-validation-for="LastName"></span>
+                    <label asp-for="LastName" class="form-label"></label>
+                    <input class="form-control" asp-for="LastName">
+                </div>
+                <div class="mb-4 display-6">
+                    <span asp-validation-for="Email"></span>
+                    <label asp-for="Email" class="form-label flicker-medium"></label>
+                    <input class="form-control" asp-for="Email">
+                </div>
+                <div class="mb-4 display-6">
+                    <span asp-validation-for="Password"></span>
+                    <label asp-for="Password"></label>
+                    <input class="form-control" asp-for="Password">
+                </div>
+                <div class=" display-6">
+                    <span asp-validation-for="Confirm"></span>
+                    <label asp-for="Confirm" class="form-label flicker-super-slow"></label>
+                    <input class="form-control" asp-for="Confirm">
+                </div>
+                <button id="submit" class="btn btn-danger flicker-medium" value="Register" type="submit">ENTER</button>
+
+            </form>
+
+        </div>
+    </div>
+    <div class="goHome2">
+        <a href="/" class="goHomeWord2">GO HOME</a>
+    </div>
+
+    <audio src="~/assets/Project mix.mp3" type="audio/mpeg" autoplay loop></audio>
+
+
+
+
+
+
+</body>
