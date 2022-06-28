@@ -16,15 +16,15 @@ public class HomeController : Controller
     [HttpGet("GetStarted")]
     public IActionResult Dashboard()
     {
-        if(HttpContext.Session.GetString("LightsRed") == null)
+        if (HttpContext.Session.GetString("LightsRed") == null)
         {
             HttpContext.Session.SetString("LightsRed", "false");
         }
-        if(HttpContext.Session.GetString("SwitchKey") == null)
+        if (HttpContext.Session.GetString("SwitchKey") == null)
         {
             HttpContext.Session.SetString("SwitchKey", "3124");
         }
-        return View("Dasboard");
+        return View("Description");
     }
 
     // [HttpGet("GetStarted/Instructions/Scores")]
@@ -50,26 +50,26 @@ public class HomeController : Controller
         string time2 = "16:05:00";
         DateTime t1 = Convert.ToDateTime(time1);
         DateTime t2 = Convert.ToDateTime(time2);
-        var timer = t2 -t1;
+        var timer = t2 - t1;
         var timerleft = timer - timeLength;
         string end1 = "00:00:00";
         string end2 = "00:00:00";
         DateTime e1 = Convert.ToDateTime(end1);
         DateTime e2 = Convert.ToDateTime(end2);
         var endgame = e2 - e1;
-        if(timerleft < endgame)
+        if (timerleft < endgame)
         {
-            return  endgame;
+            return endgame;
         }
         else return timerleft;
     }
 
     [HttpGet("Game/Room/LivingRoom")]
-    public IActionResult LivingRoom() 
+    public IActionResult LivingRoom()
     {
-        if(HttpContext.Session.GetString("StartTime") == null)
+        if (HttpContext.Session.GetString("StartTime") == null)
         {
-            string now =  DateTime.Now.Hour.ToString() + "." + DateTime.Now.Minute.ToString() + "." + DateTime.Now.Second.ToString();
+            string now = DateTime.Now.Hour.ToString() + "." + DateTime.Now.Minute.ToString() + "." + DateTime.Now.Second.ToString();
             HttpContext.Session.SetString("StartTime", now);
         }
         bool stringlights = Convert.ToBoolean(HttpContext.Session.GetString("LightsRed"));

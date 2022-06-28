@@ -7,9 +7,15 @@ namespace StrangerEscape.Models;
 [NotMapped]
 public class UserInLogin
 {
-    [Required]
-    public string LoginEmail { get;set; }
-    [Required]
-    [MinLength(8, ErrorMessage = "Password must be at least 8 characters in length.")]
-    public string LoginPassword { get;set; }
+    [Required(ErrorMessage = "You must enter your email!")]
+    [EmailAddress]
+    [Display(Name = "Email")]
+
+    public string LoginEmail { get; set; }
+
+
+    [Required(ErrorMessage = "You must enter your password!")]
+    [DataType(DataType.Password)]
+    [Display(Name = "Password")]
+    public string LoginPassword { get; set; }
 }
