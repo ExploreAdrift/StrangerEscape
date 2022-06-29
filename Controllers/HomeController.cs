@@ -82,6 +82,12 @@ public class HomeController : Controller
         return View("LivingRoom");
     }
 
+    [HttpGet("Basement")]
+    public IActionResult Basement()
+    {
+        return View("Basement");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

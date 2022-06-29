@@ -1,0 +1,43 @@
+
+body{
+    background-image: url("../img/FortUp.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.open-buttonLights{
+    height: 9%;
+    width: 17.6%;
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    bottom: calc(69.3% - 75px/2);
+    left: calc(28.25% - 75px/2);
+    cursor: pointer;
+}
+
+.form-popupLights{
+    background-color: rgb(26,11,4);
+    color: rgb(242,232,117);
+    text-align: center;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 5px;
+    
+}
+img{
+    cursor: pointer;
+}
+
+.form-containerLights .cancel {
+    margin-top: 10px;
+    background-color: red;
+}
+
+.switches button{
+    padding: 0;
+}
