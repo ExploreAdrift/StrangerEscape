@@ -1,0 +1,399 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url("../img/StrangerEscapeLiving.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+
+
+/* this is for the bookshelf */
+.open-button{
+    height: 45%;
+    width: 12.6%;
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    bottom: calc(29.3% - 75px/2);
+    left: calc(21.25% - 75px/2);
+    cursor: pointer;
+}
+
+.form-popup{
+    text-align: center;
+    display: none;
+    position: fixed;
+    left: 45%;
+    bottom: 50%;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+/* this is for the draggable divs */
+
+
+.letters{
+    /* in order to use top bottom right or left, you must use the postition key word , look up more */
+    top: 50%;
+    left: 10%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    border-radius: 10px;
+    /* look up exactly what this does, it made it wider but why */
+    transform: translate(-50%, -50%) scale(1.3);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.letters.active{
+    cursor: move;
+    user-select: none;
+}
+
+.letters h1{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', cursive;
+    color: black;
+}
+
+
+
+
+.letters2{
+    /* in order to use top bottom right or left, you must use the postition key word , look up more */
+    top: 45%;
+    left: 5%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    border-radius: 10px;
+    /* look up exactly what this does, it made it wider but why */
+    transform: translate(-50%, -50%) scale(1.3);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.letters2.active2{
+    cursor: move;
+    user-select: none;
+}
+
+.letters2 h1{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', cursive;
+    color: black;
+}
+
+
+
+
+.letters3{
+    /* in order to use top bottom right or left, you must use the postition key word , look up more */
+    top: 42%;
+    left:13%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    border-radius: 10px;
+    /* look up exactly what this does, it made it wider but why */
+    transform: translate(-50%, -50%) scale(1.3);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.letters3.active3{
+    cursor: move;
+    user-select: none;
+}
+
+.letters3 h1{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', cursive;
+    color: black;
+}
+
+
+
+
+.letters4{
+    /* in order to use top bottom right or left, you must use the postition key word , look up more */
+    top: 44%;
+    left: 11%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    border-radius: 10px;
+    /* look up exactly what this does, it made it wider but why */
+    transform: translate(-50%, -50%) scale(1.3);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.letters4.active4{
+    cursor: move;
+    user-select: none;
+}
+
+.letters4 h1{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', cursive;
+    color: black;
+}
+
+
+
+
+.letters5{
+    /* in order to use top bottom right or left, you must use the postition key word , look up more */
+    top: 40%;
+    left: 8%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    border-radius: 10px;
+    /* look up exactly what this does, it made it wider but why */
+    transform: translate(-50%, -50%) scale(1.3);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.letters5.active5{
+    cursor: move;
+    user-select: none;
+}
+
+.letters5 h1{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', cursive;
+    color: black;
+}
+
+
+
+
+.letters6{
+    /* in order to use top bottom right or left, you must use the postition key word , look up more */
+    top: 43%;
+    left: 16%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    border-radius: 10px;
+    /* look up exactly what this does, it made it wider but why */
+    transform: translate(-50%, -50%) scale(1.3);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.letters6.active6{
+    cursor: move;
+    user-select: none;
+}
+
+.letters6 h1{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', cursive;
+    color: black;
+}
+
+
+
+
+.letters7{
+    /* in order to use top bottom right or left, you must use the postition key word , look up more */
+    top: 35%;
+    left: 12%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    border-radius: 10px;
+    /* look up exactly what this does, it made it wider but why */
+    transform: translate(-50%, -50%) scale(1.3);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.letters7.active7{
+    cursor: move;
+    user-select: none;
+}
+
+.letters7 h1{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', cursive;
+    color: black;
+}
+
+
+
+
+.letters8{
+    /* in order to use top bottom right or left, you must use the postition key word , look up more */
+    top: 49%;
+    left: 6%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    border-radius: 10px;
+    /* look up exactly what this does, it made it wider but why */
+    transform: translate(-50%, -50%) scale(1.3);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.letters8.active8{
+    cursor: move;
+    user-select: none;
+}
+
+.letters8 h1{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', cursive;
+    color: black;
+}
+
+
+
+
+.letters9{
+    /* in order to use top bottom right or left, you must use the postition key word , look up more */
+    top: 35%;
+    left: 3%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    border-radius: 10px;
+    /* look up exactly what this does, it made it wider but why */
+    transform: translate(-50%, -50%) scale(1.3);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.letters9.active9{
+    cursor: move;
+    user-select: none;
+}
+
+.letters9 h1{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', cursive;
+    color: black;
+}
+
+
+
+
+.letters10{
+    /* in order to use top bottom right or left, you must use the postition key word , look up more */
+    top: 37%;
+    left: 5%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    border-radius: 10px;
+    /* look up exactly what this does, it made it wider but why */
+    transform: translate(-50%, -50%) scale(1.3);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.letters10.active10{
+    cursor: move;
+    user-select: none;
+}
+
+.letters10 h1{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', cursive;
+    color: black;
+}
+
+
+
+
+.letters11{
+    /* in order to use top bottom right or left, you must use the postition key word , look up more */
+    top: 49%;
+    left: 13%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    border-radius: 10px;
+    /* look up exactly what this does, it made it wider but why */
+    transform: translate(-50%, -50%) scale(1.3);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.letters11.active11{
+    cursor: move;
+    user-select: none;
+}
+
+.letters11 h1{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', cursive;
+    color: black;
+}
+
+
+
+/* this is for the basement door */
+.basement-door{
+    height: 50%;
+    width: 14.5%;
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    bottom: calc(29.3% - 75px/2);
+    left: calc(85.3% - 75px/2);
+    cursor: pointer;
+}
+
+
+
+
+
+/* this is for all the light bulbs */
