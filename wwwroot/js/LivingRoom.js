@@ -9,6 +9,15 @@ function closeForm() {
     document.getElementById("bookName").style.display = "none";
 }
 
+// this is for the bulb form
+function openFormBulbs() {
+    document.getElementById("form-bulbs").style.display = "block";
+}
+
+function closeFormBulbs() {
+    document.getElementById("form-bulbs").style.display = "none";
+}
+
 // this is for the dragable divs 
 
 const letters = document.querySelector(".letters")
