@@ -15,13 +15,13 @@ body{
 
 /* this is for the bookshelf */
 .open-button{
-    height: 45%;
+    height: 46.5%;
     width: 12.6%;
     background-color: transparent;
     border: 0px;
     position: absolute;
     bottom: calc(29.3% - 75px/2);
-    left: calc(21.25% - 75px/2);
+    left: calc(22.25% - 75px/2);
     cursor: pointer;
 }
 
@@ -397,3 +397,1515 @@ body{
 
 
 /* this is for all the light bulbs */
+.container {
+    width: 75px;
+    height: 275px;
+    animation: bulb-swing 3s infinite ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    /* changes the vertical position on page  */
+    bottom: calc(108.5% - 75px/2);
+    /* changes the horizontal postition on page */
+    left: calc(50% - 75px/2);
+}
+
+.container.pused {
+    animation-play-state: paused;
+}
+
+.bulb {
+    z-index: 10;
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - (75px/2));
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    cursor: pointer;
+}
+.bulb.blue {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+.bulb.green {
+    background: greenyellow;
+    box-shadow: 5px 5px 80px lightgreen, 5px -5px 80px lightgreen, -5px 5px 80px lightgreen, -5px -5px 80px lightgreen;
+    border: 1px solid black;
+}
+.bulb.red {
+    background: red;
+    box-shadow: 5px 5px 80px rgb(249, 61, 61), 5px -5px 80px rgb(249, 61, 61), -5px 5px 80px rgb(249, 61, 61), -5px -5px 80px rgb(249, 61, 61);
+    border: 1px solid black;
+}
+.bulb.yellow {
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    border: 1px solid black;
+}
+
+.bulb::before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 50px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - (35px/2));
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bulb::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    z-index: 1;
+}
+
+.bulb .filaments {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    top: 2px;
+    left: 28px;
+    box-shadow: 17px 0 black;
+    /* opacity on the fillaments decide if the inside lines show */
+    opacity: 1;
+}
+
+.bulb .filaments::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    background: black;
+    width: 2px;
+    height: 12px;
+    display: block;
+    box-shadow: 4.5px 0 black 9px 0 black;
+}
+
+.bulb.off {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+
+.filaments.off {
+    opacity: 1;
+}
+
+@keyframes bulb-swing {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* second bulb */
+
+.container2 {
+    width: 75px;
+    height: 275px;
+    animation: bulb2-swing 3s infinite ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    bottom: calc(80.5% - 75px/2);
+    /* changes postition on page */
+    left: calc(19.2% - 75px/2);
+}
+
+.container2.pused {
+    animation-play-state: paused;
+}
+
+.bulb2 {
+    z-index: 10;
+    display: block;
+    /* changes the shape of the bulb as well as the size */
+    width: 25px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - (75px/2));
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    cursor: pointer;
+}
+.bulb2.blue {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+.bulb2.green {
+    background: greenyellow;
+    box-shadow: 5px 5px 80px lightgreen, 5px -5px 80px lightgreen, -5px 5px 80px lightgreen, -5px -5px 80px lightgreen;
+    border: 1px solid black;
+}
+.bulb2.red {
+    background: red;
+    box-shadow: 5px 5px 80px rgb(249, 61, 61), 5px -5px 80px rgb(249, 61, 61), -5px 5px 80px rgb(249, 61, 61), -5px -5px 80px rgb(249, 61, 61);
+    border: 1px solid black;
+}
+.bulb2.yellow {
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    border: 1px solid black;
+}
+
+.bulb2::before {
+    content: '';
+    position: absolute;
+    /* changes the little thing inside the bulb black connector */
+    width: 0px;
+    height: 0px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - (35px/2));
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bulb2::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    z-index: 1;
+}
+
+.bulb2 .filaments {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    top: 2px;
+    left: 28px;
+    box-shadow: 17px 0 black;
+    /* opacity on the fillaments decide if the inside lines show */
+    opacity: 1;
+}
+
+.bulb2 .filaments::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    background: black;
+    width: 2px;
+    height: 12px;
+    display: block;
+    box-shadow: 4.5px 0 black 9px 0 black;
+}
+
+.bulb2.off {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+
+.filaments.off {
+    opacity: 1;
+}
+
+@keyframes bulb2-swing {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Third bulb */
+
+.container3 {
+    width: 75px;
+    height: 275px;
+    animation: bulb3-swing 3s infinite ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    bottom: calc(82.5% - 75px/2);
+    /* changes postition on page */
+    left: calc(24% - 75px/2);
+}
+
+.container3.pused {
+    animation-play-state: paused;
+}
+
+.bulb3 {
+    z-index: 10;
+    display: block;
+    /* changes the shape of the bulb as well as the size */
+    width: 25px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - (75px/2));
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    cursor: pointer;
+}
+.bulb3.blue {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+.bulb3.green {
+    background: greenyellow;
+    box-shadow: 5px 5px 80px lightgreen, 5px -5px 80px lightgreen, -5px 5px 80px lightgreen, -5px -5px 80px lightgreen;
+    border: 1px solid black;
+}
+.bulb3.red {
+    background: red;
+    box-shadow: 5px 5px 80px rgb(249, 61, 61), 5px -5px 80px rgb(249, 61, 61), -5px 5px 80px rgb(249, 61, 61), -5px -5px 80px rgb(249, 61, 61);
+    border: 1px solid black;
+}
+.bulb3.yellow {
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    border: 1px solid black;
+}
+
+.bulb3::before {
+    content: '';
+    position: absolute;
+    /* changes the little thing inside the bulb black connector */
+    width: 0px;
+    height: 0px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - (35px/2));
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bulb3::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    z-index: 1;
+}
+
+.bulb3 .filaments {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    top: 2px;
+    left: 28px;
+    box-shadow: 17px 0 black;
+    /* opacity on the fillaments decide if the inside lines show */
+    opacity: 1;
+}
+
+.bulb3 .filaments::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    background: black;
+    width: 2px;
+    height: 12px;
+    display: block;
+    box-shadow: 4.5px 0 black 9px 0 black;
+}
+
+.bulb3.off {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+
+.filaments.off {
+    opacity: 1;
+}
+
+@keyframes bulb3-swing {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fourth bulb */
+
+.container4 {
+    width: 75px;
+    height: 275px;
+    animation: bulb4-swing 3s infinite ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    bottom: calc(82.1% - 75px/2);
+    /* changes postition on page */
+    left: calc(29.2% - 75px/2);
+}
+
+.container4.pused {
+    animation-play-state: paused;
+}
+
+.bulb4 {
+    z-index: 10;
+    display: block;
+    /* changes the shape of the bulb as well as the size */
+    width: 25px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - (75px/2));
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    cursor: pointer;
+}
+.bulb4.blue {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+.bulb4.green {
+    background: greenyellow;
+    box-shadow: 5px 5px 80px lightgreen, 5px -5px 80px lightgreen, -5px 5px 80px lightgreen, -5px -5px 80px lightgreen;
+    border: 1px solid black;
+}
+.bulb4.red {
+    background: red;
+    box-shadow: 5px 5px 80px rgb(249, 61, 61), 5px -5px 80px rgb(249, 61, 61), -5px 5px 80px rgb(249, 61, 61), -5px -5px 80px rgb(249, 61, 61);
+    border: 1px solid black;
+}
+.bulb4.yellow {
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    border: 1px solid black;
+}
+
+.bulb4::before {
+    content: '';
+    position: absolute;
+    /* changes the little thing inside the bulb black connector */
+    width: 0px;
+    height: 0px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - (35px/2));
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bulb4::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    z-index: 1;
+}
+
+.bulb4 .filaments {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    top: 2px;
+    left: 28px;
+    box-shadow: 17px 0 black;
+    /* opacity on the fillaments decide if the inside lines show */
+    opacity: 1;
+}
+
+.bulb4 .filaments::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    background: black;
+    width: 2px;
+    height: 12px;
+    display: block;
+    box-shadow: 4.5px 0 black 9px 0 black;
+}
+
+.bulb4.off {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+
+.filaments.off {
+    opacity: 1;
+}
+
+@keyframes bulb4-swing {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fifth bulb */
+
+.container5 {
+    width: 75px;
+    height: 275px;
+    animation: bulb5-swing 3s infinite ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    bottom: calc(82.7% - 75px/2);
+    /* changes postition on page */
+    left: calc(36.5% - 75px/2);
+}
+
+.container5.pused {
+    animation-play-state: paused;
+}
+
+.bulb5 {
+    z-index: 10;
+    display: block;
+    /* changes the shape of the bulb as well as the size */
+    width: 25px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - (75px/2));
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    cursor: pointer;
+}
+.bulb5.blue {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+.bulb5.green {
+    background: greenyellow;
+    box-shadow: 5px 5px 80px lightgreen, 5px -5px 80px lightgreen, -5px 5px 80px lightgreen, -5px -5px 80px lightgreen;
+    border: 1px solid black;
+}
+.bulb5.red {
+    background: red;
+    box-shadow: 5px 5px 80px rgb(249, 61, 61), 5px -5px 80px rgb(249, 61, 61), -5px 5px 80px rgb(249, 61, 61), -5px -5px 80px rgb(249, 61, 61);
+    border: 1px solid black;
+}
+.bulb5.yellow {
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    border: 1px solid black;
+}
+
+.bulb5::before {
+    content: '';
+    position: absolute;
+    /* changes the little thing inside the bulb black connector */
+    width: 0px;
+    height: 0px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - (35px/2));
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bulb5::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    z-index: 1;
+}
+
+.bulb5 .filaments {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    top: 2px;
+    left: 28px;
+    box-shadow: 17px 0 black;
+    /* opacity on the fillaments decide if the inside lines show */
+    opacity: 1;
+}
+
+.bulb5 .filaments::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    background: black;
+    width: 2px;
+    height: 12px;
+    display: block;
+    box-shadow: 4.5px 0 black 9px 0 black;
+}
+
+.bulb5.off {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+
+.filaments.off {
+    opacity: 1;
+}
+
+@keyframes bulb5-swing {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sixth bulb */
+
+.container6 {
+    width: 75px;
+    height: 275px;
+    animation: bulb6-swing 3s infinite ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    bottom: calc(80.1% - 75px/2);
+    /* changes postition on page */
+    left: calc(40.2% - 75px/2);
+}
+
+.container6.pused {
+    animation-play-state: paused;
+}
+
+.bulb6 {
+    z-index: 10;
+    display: block;
+    /* changes the shape of the bulb as well as the size */
+    width: 25px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - (75px/2));
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    cursor: pointer;
+}
+.bulb6.blue {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+.bulb6.green {
+    background: greenyellow;
+    box-shadow: 5px 5px 80px lightgreen, 5px -5px 80px lightgreen, -5px 5px 80px lightgreen, -5px -5px 80px lightgreen;
+    border: 1px solid black;
+}
+.bulb6.red {
+    background: red;
+    box-shadow: 5px 5px 80px rgb(249, 61, 61), 5px -5px 80px rgb(249, 61, 61), -5px 5px 80px rgb(249, 61, 61), -5px -5px 80px rgb(249, 61, 61);
+    border: 1px solid black;
+}
+.bulb6.yellow {
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    border: 1px solid black;
+}
+
+.bulb6::before {
+    content: '';
+    position: absolute;
+    /* changes the little thing inside the bulb black connector */
+    width: 0px;
+    height: 0px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - (35px/2));
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bulb6::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    z-index: 1;
+}
+
+.bulb6 .filaments {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    top: 2px;
+    left: 28px;
+    box-shadow: 17px 0 black;
+    /* opacity on the fillaments decide if the inside lines show */
+    opacity: 1;
+}
+
+.bulb6 .filaments::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    background: black;
+    width: 2px;
+    height: 12px;
+    display: block;
+    box-shadow: 4.5px 0 black 9px 0 black;
+}
+
+.bulb6.off {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+
+.filaments.off {
+    opacity: 1;
+}
+
+@keyframes bulb6-swing {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Seventh bulb */
+
+.container7 {
+    width: 75px;
+    height: 275px;
+    animation: bulb7-swing 3s infinite ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    bottom: calc(82.6% - 75px/2);
+    /* changes postition on page */
+    left: calc(46% - 75px/2);
+}
+
+.container7.pused {
+    animation-play-state: paused;
+}
+
+.bulb7 {
+    z-index: 10;
+    display: block;
+    /* changes the shape of the bulb as well as the size */
+    width: 25px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - (75px/2));
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    cursor: pointer;
+}
+.bulb7.blue {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+.bulb7.green {
+    background: greenyellow;
+    box-shadow: 5px 5px 80px lightgreen, 5px -5px 80px lightgreen, -5px 5px 80px lightgreen, -5px -5px 80px lightgreen;
+    border: 1px solid black;
+}
+.bulb7.red {
+    background: red;
+    box-shadow: 5px 5px 80px rgb(249, 61, 61), 5px -5px 80px rgb(249, 61, 61), -5px 5px 80px rgb(249, 61, 61), -5px -5px 80px rgb(249, 61, 61);
+    border: 1px solid black;
+}
+.bulb7.yellow {
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    border: 1px solid black;
+}
+
+.bulb7::before {
+    content: '';
+    position: absolute;
+    /* changes the little thing inside the bulb black connector */
+    width: 0px;
+    height: 0px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - (35px/2));
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bulb7::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    z-index: 1;
+}
+
+.bulb7 .filaments {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    top: 2px;
+    left: 28px;
+    box-shadow: 17px 0 black;
+    /* opacity on the fillaments decide if the inside lines show */
+    opacity: 1;
+}
+
+.bulb7 .filaments::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    background: black;
+    width: 2px;
+    height: 12px;
+    display: block;
+    box-shadow: 4.5px 0 black 9px 0 black;
+}
+
+.bulb7.off {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+
+.filaments.off {
+    opacity: 1;
+}
+
+@keyframes bulb7-swing {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Eigth bulb */
+
+.container8 {
+    width: 75px;
+    height: 275px;
+    animation: bulb8-swing 3s infinite ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    bottom: calc(84.7% - 75px/2);
+    /* changes postition on page */
+    left: calc(51.2% - 75px/2);
+}
+
+.container8.pused {
+    animation-play-state: paused;
+}
+
+.bulb8 {
+    z-index: 10;
+    display: block;
+    /* changes the shape of the bulb as well as the size */
+    width: 25px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - (75px/2));
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    cursor: pointer;
+}
+.bulb8.blue {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+.bulb8.green {
+    background: greenyellow;
+    box-shadow: 5px 5px 80px lightgreen, 5px -5px 80px lightgreen, -5px 5px 80px lightgreen, -5px -5px 80px lightgreen;
+    border: 1px solid black;
+}
+.bulb8.red {
+    background: red;
+    box-shadow: 5px 5px 80px rgb(249, 61, 61), 5px -5px 80px rgb(249, 61, 61), -5px 5px 80px rgb(249, 61, 61), -5px -5px 80px rgb(249, 61, 61);
+    border: 1px solid black;
+}
+.bulb8.yellow {
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    border: 1px solid black;
+}
+
+.bulb8::before {
+    content: '';
+    position: absolute;
+    /* changes the little thing inside the bulb black connector */
+    width: 0px;
+    height: 0px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - (35px/2));
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bulb8::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    z-index: 1;
+}
+
+.bulb8 .filaments {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    top: 2px;
+    left: 28px;
+    box-shadow: 17px 0 black;
+    /* opacity on the fillaments decide if the inside lines show */
+    opacity: 1;
+}
+
+.bulb8 .filaments::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    background: black;
+    width: 2px;
+    height: 12px;
+    display: block;
+    box-shadow: 4.5px 0 black 9px 0 black;
+}
+
+.bulb8.off {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+
+.filaments.off {
+    opacity: 1;
+}
+
+@keyframes bulb8-swing {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ninth bulb */
+
+.container9 {
+    width: 75px;
+    height: 275px;
+    animation: bulb9-swing 3s infinite ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    bottom: calc(85.1% - 75px/2);
+    /* changes postition on page */
+    left: calc(54.8% - 75px/2);
+}
+
+.container9.pused {
+    animation-play-state: paused;
+}
+
+.bulb9 {
+    z-index: 10;
+    display: block;
+    /* changes the shape of the bulb as well as the size */
+    width: 25px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - (75px/2));
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    cursor: pointer;
+}
+.bulb9.blue {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+.bulb9.green {
+    background: greenyellow;
+    box-shadow: 5px 5px 80px lightgreen, 5px -5px 80px lightgreen, -5px 5px 80px lightgreen, -5px -5px 80px lightgreen;
+    border: 1px solid black;
+}
+.bulb9.red {
+    background: red;
+    box-shadow: 5px 5px 80px rgb(249, 61, 61), 5px -5px 80px rgb(249, 61, 61), -5px 5px 80px rgb(249, 61, 61), -5px -5px 80px rgb(249, 61, 61);
+    border: 1px solid black;
+}
+.bulb9.yellow {
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    border: 1px solid black;
+}
+
+.bulb9::before {
+    content: '';
+    position: absolute;
+    /* changes the little thing inside the bulb black connector */
+    width: 0px;
+    height: 0px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - (35px/2));
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bulb9::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    z-index: 1;
+}
+
+.bulb9 .filaments {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    top: 2px;
+    left: 28px;
+    box-shadow: 17px 0 black;
+    /* opacity on the fillaments decide if the inside lines show */
+    opacity: 1;
+}
+
+.bulb9 .filaments::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    background: black;
+    width: 2px;
+    height: 12px;
+    display: block;
+    box-shadow: 4.5px 0 black 9px 0 black;
+}
+
+.bulb9.off {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+
+.filaments.off {
+    opacity: 1;
+}
+
+@keyframes bulb9-swing {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tenth bulb */
+
+.container10 {
+    width: 75px;
+    height: 275px;
+    animation: bulb10-swing 3s infinite ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    bottom: calc(84.5% - 75px/2);
+    /* changes postition on page */
+    left: calc(59.8% - 75px/2);
+}
+
+.container10.pused {
+    animation-play-state: paused;
+}
+
+.bulb10 {
+    z-index: 10;
+    display: block;
+    /* changes the shape of the bulb as well as the size */
+    width: 25px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - (75px/2));
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    cursor: pointer;
+}
+.bulb10.blue {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+.bulb10.green {
+    background: greenyellow;
+    box-shadow: 5px 5px 80px lightgreen, 5px -5px 80px lightgreen, -5px 5px 80px lightgreen, -5px -5px 80px lightgreen;
+    border: 1px solid black;
+}
+.bulb10.red {
+    background: red;
+    box-shadow: 5px 5px 80px rgb(249, 61, 61), 5px -5px 80px rgb(249, 61, 61), -5px 5px 80px rgb(249, 61, 61), -5px -5px 80px rgb(249, 61, 61);
+    border: 1px solid black;
+}
+.bulb10.yellow {
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    border: 1px solid black;
+}
+
+.bulb10::before {
+    content: '';
+    position: absolute;
+    /* changes the little thing inside the bulb black connector */
+    width: 0px;
+    height: 0px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - (35px/2));
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bulb10::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    z-index: 1;
+}
+
+.bulb10 .filaments {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    top: 2px;
+    left: 28px;
+    box-shadow: 17px 0 black;
+    /* opacity on the fillaments decide if the inside lines show */
+    opacity: 1;
+}
+
+.bulb10 .filaments::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    background: black;
+    width: 2px;
+    height: 12px;
+    display: block;
+    box-shadow: 4.5px 0 black 9px 0 black;
+}
+
+.bulb10.off {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+
+.filaments.off {
+    opacity: 1;
+}
+
+@keyframes bulb10-swing {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Eleventh bulb */
+
+.container11 {
+    width: 75px;
+    height: 275px;
+    animation: bulb11-swing 3s infinite ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    bottom: calc(86.1% - 75px/2);
+    /* changes postition on page */
+    left: calc(66.2% - 75px/2);
+}
+
+.container11.pused {
+    animation-play-state: paused;
+}
+
+.bulb11 {
+    z-index: 10;
+    display: block;
+    /* changes the shape of the bulb as well as the size */
+    width: 25px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - (75px/2));
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    cursor: pointer;
+}
+.bulb11.blue {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+.bulb11.green {
+    background: greenyellow;
+    box-shadow: 5px 5px 80px lightgreen, 5px -5px 80px lightgreen, -5px 5px 80px lightgreen, -5px -5px 80px lightgreen;
+    border: 1px solid black;
+}
+.bulb11.red {
+    background: red;
+    box-shadow: 5px 5px 80px rgb(249, 61, 61), 5px -5px 80px rgb(249, 61, 61), -5px 5px 80px rgb(249, 61, 61), -5px -5px 80px rgb(249, 61, 61);
+    border: 1px solid black;
+}
+.bulb11.yellow {
+    background: rgb(254, 254, 48);
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+    border: 1px solid black;
+}
+
+.bulb11::before {
+    content: '';
+    position: absolute;
+    /* changes the little thing inside the bulb black connector */
+    width: 0px;
+    height: 0px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - (35px/2));
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bulb11::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: black;
+    bottom: 100%;
+    left: calc(50% - 5px);
+    z-index: 1;
+}
+
+.bulb11 .filaments {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    top: 2px;
+    left: 28px;
+    box-shadow: 17px 0 black;
+    /* opacity on the fillaments decide if the inside lines show */
+    opacity: 1;
+}
+
+.bulb11 .filaments::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    background: black;
+    width: 2px;
+    height: 12px;
+    display: block;
+    box-shadow: 4.5px 0 black 9px 0 black;
+}
+
+.bulb11.off {
+    background: lightskyblue;
+    box-shadow: 5px 5px 80px lightseagreen, 5px -5px 80px lightseagreen, -5px 5px 80px lightseagreen, -5px -5px 80px lightseagreen;
+    border: 1px solid black;
+}
+
+.filaments.off {
+    opacity: 1;
+}
+
+@keyframes bulb11-swing {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
