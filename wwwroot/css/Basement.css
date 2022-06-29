@@ -5,6 +5,7 @@ body{
     background-repeat: no-repeat;
 }
 
+/* this is for the div over the light switches  */
 .open-buttonLights{
     height: 9%;
     width: 17.6%;
@@ -40,4 +41,16 @@ img{
 
 .switches button{
     padding: 0;
+}
+
+/* this is for the living room door  */
+.LivingRoomDoor{
+    height: 49%;
+    width: 16.6%;
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    bottom: calc(30.3% - 75px/2);
+    left: calc(8.7% - 75px/2);
+    cursor: pointer;
 }
