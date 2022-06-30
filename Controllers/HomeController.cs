@@ -16,14 +16,47 @@ public class HomeController : Controller
     [HttpGet("GetStarted")]
     public IActionResult Dashboard()
     {
+        if(HttpContext.Session.GetInt32("userid") == null)
+        {
+            return RedirectToAction("Landing", "LoginAndReg");
+        }
+        //First Puzzle - Lights to Red
         if (HttpContext.Session.GetString("LightsRed") == null)
         {
             HttpContext.Session.SetString("LightsRed", "false");
         }
+        if(HttpContext.Session.GetString("LightsKey") == null)
+        {
+            HttpContext.Session.SetString("LightsKey", "1111111111"); 
+        }
+        //Second Puzzle - Switches in Order
         if (HttpContext.Session.GetString("SwitchKey") == null)
         {
             HttpContext.Session.SetString("SwitchKey", "3124");
         }
+        if(HttpContext.Session.GetString("SwitchsFlipped") == null)
+        {
+            HttpContext.Session.SetString("SwitchesFlipped", "false");
+        }
+        //Third Puzzle - BookShelf Input
+        if(HttpContext.Session.GetString("BookKey") == null)
+        {
+            HttpContext.Session.SetString("BookKey", "michael choi");
+        }
+        if(HttpContext.Session.GetString("TitleNamed") == null)
+        {
+            HttpContext.Session.SetString("TitleNamed", "false");
+        }
+        //Final Puzzle - Safe Code
+        if(HttpContext.Session.GetString("SafeKey") == null)
+        {
+            HttpContext.Session.SetString("SafeKey", "1047");
+        }
+        if(HttpContext.Session.GetString("SafeUnlock") == null)
+        {
+            HttpContext.Session.SetString("SafeUnlock", "false");
+        }
+
         return View("Description");
     }
 
@@ -66,18 +99,25 @@ public class HomeController : Controller
     // }
 
     [HttpGet("LivingRoom")]
-    public IActionResult LivingRoom()
+    public IActionResult LivingRoom(string bulbCode)
     {
-        // if (HttpContext.Session.GetString("StartTime") == null)
-        // {
-        //     string now = DateTime.Now.Hour.ToString() + "." + DateTime.Now.Minute.ToString() + "." + DateTime.Now.Second.ToString();
-        //     HttpContext.Session.SetString("StartTime", now);
-        // }
-        // bool stringlights = Convert.ToBoolean(HttpContext.Session.GetString("LightsRed"));
-        // ViewBag.lights = stringlights;
-        // ViewBag.SwitchKey = HttpContext.Session.GetString("SwitchKey");
+        if(HttpContext.Session.GetInt32("userid") == null)
+        {
+            return RedirectToAction("Landing", "LoginAndReg");
+        }
+        if(!String.IsNullOrEmpty(bulbCode))
+        {
+            string LightsKey = HttpContext.Session.GetString("LightsKey");
+            if(bulbCode == LightsKey)
+            {
+                HttpContext.Session.SetString("LightsRed", "true");
+            }
+        }
 
-        // ViewBag.timer = getTimeSpan();
+        if(HttpContext.Session.GetString("LightsRed") == "true")
+        {
+            return RedirectToAction("LivingRoomDark");
+        }
 
         return View("LivingRoom");
     }
@@ -86,6 +126,18 @@ public class HomeController : Controller
     public IActionResult LivingRoomDark()
     {
         return View("LivingRoomDark");
+    }
+
+    [HttpGet("Basement")]
+    public IActionResult Basement()
+    {
+        return View("Basement");
+    }
+    
+    [HttpGet("BasementLight")]
+    public IActionResult BasementLight()
+    {
+        return View("BasementLight");
     }
 
     [HttpGet("LivingRoom2")]
@@ -104,18 +156,6 @@ public class HomeController : Controller
     public IActionResult LivingRoom4()
     {
         return View("LivingRoom4");
-    }
-
-    [HttpGet("Basement")]
-    public IActionResult Basement()
-    {
-        return View("Basement");
-    }
-
-    [HttpGet("BasementLight")]
-    public IActionResult BasementLight()
-    {
-        return View("BasementLight");
     }
 
     [HttpGet("BasementFinal")]

@@ -71,15 +71,16 @@
     @* this is for the bulbs pop up form *@
     <button class="open-bulbs" onclick="openFormBulbs()"></button>
     <div class="form-bulbs" id="form-bulbs">
-        <form action="" class="form-container-bulbs">
+        <form asp-controller="Home" asp-action="LivingRoom" class="form-container-bulbs" method="get">
             <h1>This Reminds Me Of Thing Will Would Always say</h1>
             <h3 class="mt-4">"I tried to see the light but all i see is red..."</h3>
             <h3>If I Think I Got It Right, I Should Try It! <br> If not, well maybe I should close this and figure it
                 out.</h3>
 
-            <input type="hidden" name="" id="bulbCode" value="">
+            <input type="hidden" name="bulbCode" id="bulbCode" value="">
             <div class="d-flex justify-content-center gap-5 mt-3">
-                <button class="btn btn-warning" type="submit">Try It</button>
+                <input type="submit" Value="Try It" class="btn btn-primary">
+                @* <button class="btn btn-warning" type="submit">Try It</button> *@
                 <button type="button" class="btn btn-danger cancel" onclick="closeFormBulbs()">Close</button>
             </div>
         </form>
