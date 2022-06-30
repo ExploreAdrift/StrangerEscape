@@ -17,6 +17,11 @@ function closePaper() {
     document.getElementById("Paper").style.display = "none";
 }
 
+// this is for pop up after switches
+function closepopUp() {
+    document.getElementById("popUp").style.display = "none";
+}
+
 
 let disp = "";
 

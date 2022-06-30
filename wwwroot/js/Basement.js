@@ -23,6 +23,11 @@ function closeFort() {
   document.getElementById("fort").style.display = "none";
 }
 
+// this is for pop up after switches
+function closepopUp() {
+  document.getElementById("popUp").style.display = "none";
+}
+
 // this is for the door when they cant leave
 function openLivingRoomDoor() {
   document.getElementById("LivingRoomDoor").style.display = "block";

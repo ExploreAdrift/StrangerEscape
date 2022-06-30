@@ -27,45 +27,57 @@
         </div>
     </div>
     <div class="container2">
-        <div class="bulb2">
+        <div class="bulb2" style="background-color: red;">
 
         </div>
     </div>
     <div class="container3">
-        <div class="bulb3">
+        <div class="bulb3" style="background-color: red;">
         </div>
     </div>
     <div class="container4">
-        <div class="bulb4">
+        <div class="bulb4" style="background-color: red;">
         </div>
     </div>
     <div class="container5">
-        <div class="bulb5">
+        <div class="bulb5" style="background-color: red;">
         </div>
     </div>
     <div class="container6">
-        <div class="bulb6">
+        <div class="bulb6" style="background-color: yellow;">
         </div>
     </div>
     <div class="container7">
-        <div class="bulb7">
+        <div class="bulb7" style="background-color: red;">
         </div>
     </div>
     <div class="container8">
-        <div class="bulb8">
+        <div class="bulb8" style="background-color: red;">
         </div>
     </div>
     <div class="container9">
-        <div class="bulb9">
+        <div class="bulb9" style="background-color: red;">
         </div>
     </div>
     <div class="container10">
-        <div class="bulb10">
+        <div class="bulb10" style="background-color: red;">
         </div>
     </div>
     <div class="container11">
-        <div class="bulb11">
+        <div class="bulb11" style="background-color: red;">
         </div>
+    </div>
+
+
+    <div class="form-popUp" id="popUp">
+        <form action="" class="form-container-popUp">
+            <h3>The Safe Flings Open!</h3>
+            <h4>I Found A Plate Of...Well Somehow Its Freshly Made Waffles! </h4>
+            <h4>This Could Be Useful If I go DownStairs...</h4>
+            <div class="d-flex justify-content-center gap-5 mt-3">
+                <button type="button" class="btn btn-danger" onclick="closepopUp()">Close</button>
+            </div>
+        </form>
     </div>
 
 
@@ -73,14 +85,8 @@
     <button class="open-bulbs" onclick="openFormBulbs()"></button>
     <div class="form-bulbs" id="form-bulbs">
         <form action="" class="form-container-bulbs">
-            <h1>This Reminds Me Of Thing Will Would Always say</h1>
-            <h3 class="mt-4">"I tried to see the light but all i see is red..."</h3>
-            <h3>If I Think I Got It Right, I Should Try It! <br> If not, well maybe I should close this and figure it
-                out.</h3>
-
-            <input type="hidden" name="" id="bulbCode" value="">
+            <h1>I Should Go Give This To Her In the Basement <br>Im Sure She Will Help</h1>
             <div class="d-flex justify-content-center gap-5 mt-3">
-                <button class="btn btn-warning" type="submit">Try It</button>
                 <button type="button" class="btn btn-danger cancel" onclick="closeFormBulbs()">Close</button>
             </div>
         </form>
@@ -88,14 +94,14 @@
 
 
     <!-- this goes in the second living room after the lights  -->
-    <button class="open-Safe" onclick="openFormSafe()"></button>
+    <button class="open-Safe" onclick="openFormBulbs()"></button>
     <div class="form-Safe" id="form-Safe">
         <div class="form-container-Safe">
             <div id="calculator">
-                <form action="">
+                <form asp-controller="Home" asp-action="LivingRoom3" method="get">
                     <div id="display">0</div>
                     <div class="row1">
-                        <input type="hidden" name="code" id="code">
+                        <input type="hidden" name="safecode" id="code">
                         <button type="submit" id="equals">Enter Code</button>
                     </div>
                 </form>
@@ -128,7 +134,7 @@
 
 
     @* this is for the book shelf form *@
-    <button class="open-button" onclick="openForm()"></button>
+    <button class="open-button" onclick="openFormBulbs()"></button>
     <div class="form-popup" id="bookName">
         <form action="" class="form-container">
             <h1>Enter A Title</h1>
@@ -138,41 +144,47 @@
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
     </div>
+
+
+
+    @* this is for the door *@
     <a asp-controller="Home" asp-action="BasementFinal"><button class="basement-door"></button></a>
+    
+    
     <div class="letters">
-        <h1>M</h1>
+        <h1 style="color: black; font-size: 0px; ">M</h1>
     </div>
     <div class="letters2">
-        <h1>I</h1>
+        <h1 style="color: black; font-size: 0px; ">I</h1>
     </div>
     <div class="letters3">
-        <h1>C</h1>
+        <h1 style="color: black; font-size: 0px; ">C</h1>
     </div>
     <div class="letters4">
-        <h1>H</h1>
+        <h1 style="color: black; font-size: 0px; ">H</h1>
     </div>
     <div class="letters5">
-        <h1>A</h1>
+        <h1 style="color: black; font-size: 0px; ">A</h1>
     </div>
     <div class="letters6">
-        <h1>E</h1>
+        <h1 style="color: black; font-size: 0px; ">E</h1>
     </div>
     <div class="letters7">
-        <h1>L</h1>
+        <h1 style="color: black; font-size: 0px; ">L</h1>
     </div>
     <div class="letters8">
-        <h1>C</h1>
+        <h1 style="color: black; font-size: 0px; ">C</h1>
     </div>
     <div class="letters9">
-        <h1>H</h1>
+        <h1 style="color: black; font-size: 0px; ">H</h1>
     </div>
     <div class="letters10">
-        <h1>O</h1>
+        <h1 style="color: black; font-size: 0px; ">O</h1>
     </div>
     <div class="letters11">
-        <h1>I</h1>
+        <h1 style="color: black; font-size: 0px; ">I</h1>
     </div>
-    <audio src="~/assets/RainPump.mp3" type="audio/mpeg" autoplay loop></audio>
+    <audio src="~/assets/LivingRoom3.mp3" type="audio/mpeg" autoplay loop></audio>
     <script src="~/js/LivingRoom.js" asp-append-version="true"></script>
 </body>
 

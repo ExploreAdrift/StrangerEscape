@@ -6,6 +6,37 @@ body{
 }
 
 
+/* this is for the popUp */
+.open-popUp{
+    height: 29%;
+    width: 48.6%;
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    bottom: calc(21.3% - 75px/2);
+    left: calc(35.25% - 75px/2);
+    cursor: pointer;
+}
+
+.form-popUp{
+    background-color: rgb(26,11,4);
+    color: rgb(242,232,117);
+    text-align: center;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 5px;
+    
+}
+.form-popUp .cancel {
+    margin-top: 10px;
+    background-color: red;
+}
+
+
 /* this is for the fort */
 .open-fort{
     height: 29%;
