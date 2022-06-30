@@ -195,13 +195,15 @@ span:hover
   /* VIDEO BACKGROUND SETTINGS */
 video {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 105%;
     position: fixed;
     top: 0;
     left: 0;
     size: 100vw 100vh;
     background-repeat: no-repeat;
+    overflow: hidden;
+    
 }
 
 .video-wrapper {
