@@ -34,7 +34,7 @@ public class HomeController : Controller
         {
             HttpContext.Session.SetString("SwitchKey", "3124");
         }
-        if(HttpContext.Session.GetString("SwitchsFlipped") == null)
+        if(HttpContext.Session.GetString("SwitchesFlipped") == null)
         {
             HttpContext.Session.SetString("SwitchesFlipped", "false");
         }
@@ -56,62 +56,65 @@ public class HomeController : Controller
         {
             HttpContext.Session.SetString("SafeUnlock", "false");
         }
+        //Fail Attempts Session Tracker
+        if(HttpContext.Session.GetInt32("PuzzleFails") == null)
+        {
+            HttpContext.Session.SetInt32("PuzzleFails", 0);
+        }
+        //Fail Counter
+        if(HttpContext.Session.GetInt32("FailCount") == null)
+        {
+            HttpContext.Session.SetInt32("FailCount", 0);
+        }
+
+
 
         return View("Description");
     }
 
-
-    // [HttpGet("GetStarted/Instructions/Scores")]
-    // public IActionResult Instructions()
-    // {
-    //     List<User> users = _context.Users.
-
-    // }
-
-    // public TimeSpan getTimeSpan()
-    // {
-    //     //Timer Calculations - Calculating the difference from start to current;
-
-    //     string startTime = HttpContext.Session.GetString("StartTime");
-    //     DateTime start = Convert.ToDateTime(startTime);
-    //     string currentTime = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString();
-    //     DateTime current = Convert.ToDateTime(currentTime);
-    //     var timeLength = current - start;
-
-    //     //Display Timer
-
-    //     string time1 = "16:00:00";
-    //     string time2 = "16:05:00";
-    //     DateTime t1 = Convert.ToDateTime(time1);
-    //     DateTime t2 = Convert.ToDateTime(time2);
-    //     var timer = t2 - t1;
-    //     var timerleft = timer - timeLength;
-    //     string end1 = "00:00:00";
-    //     string end2 = "00:00:00";
-    //     DateTime e1 = Convert.ToDateTime(end1);
-    //     DateTime e2 = Convert.ToDateTime(end2);
-    //     var endgame = e2 - e1;
-    //     if (timerleft < endgame)
-    //     {
-    //         return endgame;
-    //     }
-    //     else return timerleft;
-    // }
-
     [HttpGet("LivingRoom")]
-    public IActionResult LivingRoom(string bulbCode)
+    public IActionResult LivingRoom(string bulbCode, string Difficulty)
     {
         if(HttpContext.Session.GetInt32("userid") == null)
         {
             return RedirectToAction("Landing", "LoginAndReg");
         }
+
+        //Difficulty Levels
+        if(HttpContext.Session.GetInt32("Difficulty") == null)
+        {
+            if(Difficulty == "Easy" || Difficulty == null)
+            {
+                HttpContext.Session.SetInt32("Difficulty", 3);
+            }
+            if(Difficulty == "Medium")
+            {
+                HttpContext.Session.SetInt32("Difficulty", 2);
+            }
+            if(Difficulty == "Hard")
+            {
+                HttpContext.Session.SetInt32("Difficulty", 1);
+            }
+        }
+
         if(!String.IsNullOrEmpty(bulbCode))
         {
             string LightsKey = HttpContext.Session.GetString("LightsKey");
             if(bulbCode == LightsKey)
             {
                 HttpContext.Session.SetString("LightsRed", "true");
+                HttpContext.Session.SetInt32("FailCount", 0);
             }
+            else
+            {
+                int count = (int)HttpContext.Session.GetInt32("FailCount");
+                count++;
+                HttpContext.Session.SetInt32("FailCount", count);
+            }
+        }
+        if(HttpContext.Session.GetInt32("FailCount") == HttpContext.Session.GetInt32("Difficulty"))
+        {
+            return RedirectToAction("JumpScare");
         }
 
         if(HttpContext.Session.GetString("LightsRed") == "true")
@@ -125,43 +128,186 @@ public class HomeController : Controller
     [HttpGet("LivingRoomDark")]
     public IActionResult LivingRoomDark()
     {
-        return View("LivingRoomDark");
+        if(HttpContext.Session.GetInt32("userid") == null)
+        {
+            return RedirectToAction("Landing", "LoginAndReg");
+        }
+        if(HttpContext.Session.GetString("LightsRed") == "true")
+        {
+            return View("LivingRoomDark");
+        }
+        return RedirectToAction("LivingRoom");
     }
 
     [HttpGet("Basement")]
-    public IActionResult Basement()
+    public IActionResult Basement(string lightriddle)
     {
+        if(HttpContext.Session.GetInt32("userid") == null)
+        {
+            return RedirectToAction("Landing", "LoginAndReg");
+        }
+        if(HttpContext.Session.GetString("LightsRed") == "false")
+        {
+            return RedirectToAction("LivingRoom");
+        }
+        if(!String.IsNullOrEmpty(lightriddle))
+        {
+            string SwitchKey = HttpContext.Session.GetString("SwitchKey");
+            if(lightriddle == SwitchKey)
+            {
+                HttpContext.Session.SetString("SwitchesFlipped", "true");
+                HttpContext.Session.SetInt32("FailCount", 0);
+            }
+            else
+            {
+                int count = (int)HttpContext.Session.GetInt32("FailCount");
+                count++;
+                HttpContext.Session.SetInt32("FailCount", count);
+            }
+            if(HttpContext.Session.GetInt32("FailCount") == HttpContext.Session.GetInt32("Difficulty"))
+            {
+                return RedirectToAction("JumpScare");
+            }
+        }
+
+        if(HttpContext.Session.GetString("SwitchesFlipped") == "true")
+        {
+            return RedirectToAction("BasementLight");
+        }
         return View("Basement");
     }
     
     [HttpGet("BasementLight")]
     public IActionResult BasementLight()
     {
-        return View("BasementLight");
+        if(HttpContext.Session.GetInt32("userid") == null)
+        {
+            return RedirectToAction("Landing", "LoginAndReg");
+        }
+        if(HttpContext.Session.GetString("SwitchesFlipped") == "true")
+        {
+            return View("BasementLight");
+        }
+        return RedirectToAction("Basement");
     }
 
     [HttpGet("LivingRoom2")]
-    public IActionResult LivingRoom2()
+    public IActionResult LivingRoom2(string booktitle)
     {
+        if(HttpContext.Session.GetInt32("userid") == null)
+        {
+            return RedirectToAction("Landing", "LoginAndReg");
+        }
+        if(HttpContext.Session.GetString("SwitchesFlipped") == "false")
+        {
+            return RedirectToAction("Basement");
+        }
+        if(!String.IsNullOrEmpty(booktitle))
+        {
+            string BookKey = HttpContext.Session.GetString("BookKey");
+            if(booktitle.ToLower() == BookKey)
+            {
+                HttpContext.Session.SetString("TitleNamed", "true");
+                HttpContext.Session.SetInt32("FailCount", 0);
+            }
+            else
+            {
+                int count = (int)HttpContext.Session.GetInt32("FailCount");
+                count++;
+                HttpContext.Session.SetInt32("FailCount", count);
+            }
+            if(HttpContext.Session.GetInt32("FailCount") == HttpContext.Session.GetInt32("Difficulty"))
+            {
+                return RedirectToAction("JumpScare");
+            }
+        }
+
+        if(HttpContext.Session.GetString("TitleNamed") == "true")
+        {
+            return RedirectToAction("LivingRoom3");
+        }
         return View("LivingRoom2");
     }
 
     [HttpGet("LivingRoom3")]
-    public IActionResult LivingRoom3()
+    public IActionResult LivingRoom3(string safecode)
     {
+        if(HttpContext.Session.GetInt32("userid") == null)
+        {
+            return RedirectToAction("Landing", "LoginAndReg");
+        }
+        if(HttpContext.Session.GetString("TitleNamed") == "false")
+        {
+            return RedirectToAction("LivingRoom2");
+        }
+        if(!String.IsNullOrEmpty(safecode))
+        {
+            string SafeKey = HttpContext.Session.GetString("SafeKey");
+            if(safecode == SafeKey)
+            {
+                HttpContext.Session.SetString("SafeUnlock", "true");
+                HttpContext.Session.SetInt32("FailCount", 0);
+            }
+            else
+            {
+                int count = (int)HttpContext.Session.GetInt32("FailCount");
+                count++;
+                HttpContext.Session.SetInt32("FailCount", count);
+            }
+            if(HttpContext.Session.GetInt32("FailCount") == HttpContext.Session.GetInt32("Difficulty"))
+            {
+                return RedirectToAction("JumpScare");
+            }
+        }
+
+        if(HttpContext.Session.GetString("SafeUnlock") == "true")
+        {
+            return RedirectToAction("LivingRoom4");
+        }
         return View("LivingRoom3");
     }
 
     [HttpGet("LivingRoom4")]
     public IActionResult LivingRoom4()
     {
+        if(HttpContext.Session.GetInt32("userid") == null)
+        {
+            return RedirectToAction("Landing", "LoginAndReg");
+        }
+        if(HttpContext.Session.GetString("SafeUnlock") == "false")
+        {
+            return RedirectToAction("LivingRoom3");
+        }
         return View("LivingRoom4");
     }
 
     [HttpGet("BasementFinal")]
     public IActionResult BasementFinal()
     {
+        if(HttpContext.Session.GetInt32("userid") == null)
+        {
+            return RedirectToAction("Landing", "LoginAndReg");
+        }
+        if(HttpContext.Session.GetString("SafeUnlock") == "false")
+        {
+            return RedirectToAction("LivingRoom3");
+        }
         return View("BasementFinal");
+    }
+
+    [HttpGet("Success")]
+    public IActionResult JumpScare()
+    {
+        return View("JumpScare");
+    }
+
+    [HttpPost("StartOver")]
+    public IActionResult StartOver()
+    {
+        int seshid = (int)HttpContext.Session.GetInt32("userid");
+        HttpContext.Session.Clear();
+        HttpContext.Session.SetInt32("userid", seshid);
+        return RedirectToAction("Dashboard");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

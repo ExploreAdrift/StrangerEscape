@@ -70,7 +70,7 @@
 
     <button class="open-buttonLights" onclick="openFormLights()"></button>
     <div class="form-popupLights" id="basementlights">
-        <form action="" class="form-containerLights">
+        <form asp-controller="Home" asp-action="Basement" class="form-containerLights" method="get">
             <h1>A Note Was Left Beside the Lights <br></h1>
             <p>First wasn't first, even in reverse. <br>
                 Second seconded that, but with its own worth. <br>
@@ -89,9 +89,10 @@
 
             </div>
 
-            <input type="hidden" name="" id="lightriddle" value="">
+            <input type="hidden" name="lightriddle" id="lightriddle" value="">
             <div class="d-flex justify-content-center gap-5 mt-3">
-                <button class="btn btn-warning" type="submit">Try It</button>
+                <input type="submit" class="btn btn-warning" value="Try It">
+                @* <button class="btn btn-warning" type="submit">Try It</button> *@
                 <button type="button" class="btn btn-danger" onclick="closeFormLights()">Close</button>
             </div>
         </form>

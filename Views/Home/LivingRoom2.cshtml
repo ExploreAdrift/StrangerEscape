@@ -136,11 +136,12 @@
     @* this is for the book shelf form *@
     <button class="open-button" onclick="openForm()"></button>
     <div class="form-popup" id="bookName">
-        <form action="" class="form-container">
+        <form asp-controller="Home" asp-action="LivingRoom2" class="form-container" method="get">
             <h1>Enter A Title</h1>
-            <input type="text" name="" id="" placeholder="">
+            <input type="text" autocomplete="off" name="booktitle">
             <div class="d-flex justify-content-center gap-5 mt-3">
-                <button class="btn btn-warning"> Try It</button>
+                <input type="submit" value="Try It" class="btn btn-warning">
+                @* <button class="btn btn-warning"> Try It</button> *@
                 <button type="button" class="btn btn-danger cancel" onclick="closeForm()">Close</button>
             </div>
         </form>
