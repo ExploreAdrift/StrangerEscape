@@ -32,7 +32,7 @@
             width: 100%;
             height: 100%;
             position: fixed;
-            background: radial-gradient(circle 8rem at var(--cursorXpos) var(--cursorYpos),
+            background: radial-gradient(circle 15rem at var(--cursorXpos) var(--cursorYpos),
                     rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
             z-index: 11;
 
@@ -40,7 +40,34 @@
             pointer-events: none;
         }
     </style>
-    <a asp-controller="Home" asp-action="LivingRoom"><button class="LivingRoomDoor"></button></a>
+
+
+
+    @* this is for the fort when it cant be opened *@
+    <button class="open-fort" onclick="openFort()"></button>
+    <div class="form-fort" id="fort">
+        <form action="" class="form-containerFort">
+            <h1>Shes Hungry, I shouldnt Bother her. <br></h1>
+            <div class="d-flex justify-content-center gap-5 mt-3">
+                <button type="button" class="btn btn-danger" onclick="closeFort()">Close</button>
+            </div>
+        </form>
+    </div>
+
+
+
+<button class="LivingRoomDoor" onclick="openLivingRoomDoor()"></button>
+    <div class="form-LivingRoomDoor" id="LivingRoomDoor">
+        <form action="" class="form-containerLivingRoomDoor">
+            <h1>I Really Should Be Fixing The Circuit Breaker.<br>
+            I Feel Like Im Being Controlled By An Idiot...</h1>
+            <div class="d-flex justify-content-center gap-5 mt-3">
+                <button type="button" class="btn btn-danger" onclick="closeLivingRoomDoor()">Close</button>
+            </div>
+        </form>
+    </div>
+
+
     <button class="open-buttonLights" onclick="openFormLights()"></button>
     <div class="form-popupLights" id="basementlights">
         <form action="" class="form-containerLights">

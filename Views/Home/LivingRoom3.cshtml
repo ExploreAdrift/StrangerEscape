@@ -85,52 +85,91 @@
         </form>
     </div>
 
-    @* this is for the safe to say no not yet *@
-    <button class="open-Safe" onclick="openForm()"></button>
 
-    @* this is for the book shelf to say focus on lights *@
+    <!-- this goes in the second living room after the lights  -->
+    <button class="open-Safe" onclick="openFormSafe()"></button>
+    <div class="form-Safe" id="form-Safe">
+        <div class="form-container-Safe">
+            <div id="calculator">
+                <form action="">
+                    <div id="display">0</div>
+                    <div class="row1">
+                        <input type="hidden" name="code" id="code">
+                        <button type="submit" id="equals">Enter Code</button>
+                    </div>
+                </form>
+                <div class="row1">
+                    <button onclick="press(7);">7</button>
+                    <button onclick="press(8);">8</button>
+                    <button onclick="press(9);">9</button>
+                </div>
+                <div class="row1">
+                    <button onclick="press(4);">4</button>
+                    <button onclick="press(5);">5</button>
+                    <button onclick="press(6);">6</button>
+                </div>
+                <div class="row1">
+                    <button onclick="press(1);">1</button>
+                    <button onclick="press(2);">2</button>
+                    <button onclick="press(3);">3</button>
+                </div>
+                <div class="row1">
+                    <button onclick="clr();">C</button>
+                    <button onclick="press(0);">0</button>
+                </div>
+
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <button type="button" class="btn btn-danger cancel" onclick="closeFormSafe()">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    @* this is for the book shelf form *@
     <button class="open-button" onclick="openForm()"></button>
     <div class="form-popup" id="bookName">
         <form action="" class="form-container">
-            <h1>I Should Figure Out these Lights First</h1>
+            <h1>Enter A Title</h1>
+
+            <label for="bookTitle">Title</label>
+            <input type="text" name="" id="">
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
     </div>
-
-
-    <button class="basement-door" onclick="openForm()"></button>
+    <a asp-controller="Home" asp-action="Basement"><button class="basement-door"></button></a>
     <div class="letters">
-        <h1 style="color: black; font-size: 0px; ">M</h1>
+        <h1>M</h1>
     </div>
     <div class="letters2">
-        <h1 style="color: black; font-size: 0px; ">I</h1>
+        <h1>I</h1>
     </div>
     <div class="letters3">
-        <h1 style="color: black; font-size: 0px; ">C</h1>
+        <h1>C</h1>
     </div>
     <div class="letters4">
-        <h1 style="color: black; font-size: 0px; ">H</h1>
+        <h1>H</h1>
     </div>
     <div class="letters5">
-        <h1 style="color: black; font-size: 0px; ">A</h1>
+        <h1>A</h1>
     </div>
     <div class="letters6">
-        <h1 style="color: black; font-size: 0px; ">E</h1>
+        <h1>E</h1>
     </div>
     <div class="letters7">
-        <h1 style="color: black; font-size: 0px; ">L</h1>
+        <h1>L</h1>
     </div>
     <div class="letters8">
-        <h1 style="color: black; font-size: 0px; ">C</h1>
+        <h1>C</h1>
     </div>
     <div class="letters9">
-        <h1 style="color: black; font-size: 0px; ">H</h1>
+        <h1>H</h1>
     </div>
     <div class="letters10">
-        <h1 style="color: black; font-size: 0px; ">O</h1>
+        <h1>O</h1>
     </div>
     <div class="letters11">
-        <h1 style="color: black; font-size: 0px; ">I</h1>
+        <h1>I</h1>
     </div>
     <audio src="~/assets/LivingRoom.mp3" type="audio/mpeg" autoplay loop></audio>
     <script src="~/js/LivingRoom.js" asp-append-version="true"></script>
