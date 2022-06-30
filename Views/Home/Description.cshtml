@@ -79,28 +79,33 @@
                                 class="st-things-i flicker-fast">c</span><span class="st-things-n">a</span><span
                                 class="st-things-g">p</span><span class="st-things-s">e</span></p>
 
-                    </div>
-                    <form asp-controller="Home" asp-action="LivingRoom" method="get" style="position: absolute;">
-                        <fieldset>
-                            <legend>Select a Difficulty:</legend>
-                            <div>
-                                <input type="radio" name="difficulty" value="Easy">
-                                <label for="huey">Basically Eleven</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="difficulty" value="Medium">
-                                <label for="Medium">Scared But Okay</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="difficulty" value="Hard">
-                                <label for="Hard">We're Out of Waffles, Its Bad</label>
-                            </div>
-                        </fieldset>
+                        <form asp-controller="Home" asp-action="LivingRoom" method="get" class="difficulty">
+                            <p>
+                            <h2>Select a Difficulty:</h2>
+                            <fieldset class="d-flex">
 
-                        <div class="fs-5 tags Twelve text-center">
-                            <button type="submit" class="tagsColor">PROCEED</button>
-                        </div>
-                    </form>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="radio" name="difficulty" value="Easy">
+                                    <label for="Easy">Basically Eleven</label>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="radio" name="difficulty" value="Medium">
+                                    <label for="Medium">Scared But Okay</label>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input type="radio" name="difficulty" value="Hard">
+                                    <label for="Hard">We're Out of Waffles, Its Bad</label>
+                                </div>
+                            </fieldset>
+                            </p>
+
+                            <div class=" Eleven text-center">
+                                <button type="submit" class="btn btn-danger proceed">PROCEED</button>
+                            </div>
+                        </form>
+
+                    </div>
+
                 </div>
             </div>
         </div>
