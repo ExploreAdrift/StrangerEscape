@@ -20,6 +20,29 @@
 
 
 <body>
+
+    <style id="flashLight">
+        :root {
+            /* cursor: none;  */
+            --cursorXpos: 50vw;
+            --cursorYpos: 50vh;
+        }
+
+        :root::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: radial-gradient(circle 15rem at var(--cursorXpos) var(--cursorYpos),
+                    rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+            z-index: 11;
+
+            /* allows me to click through later onto elements behind it */
+            pointer-events: none;
+        }
+    </style>
+
+
     <div class="container">
         <div class="bulb">
             <div class="filaments"></div>
@@ -69,7 +92,7 @@
 
 
     @* this is for the bulbs pop up form *@
-    <button class="open-bulbs" onclick="openFormBulbs()"></button>
+    <button class="open-bulbs" onclick="openForm()"></button>
     <div class="form-bulbs" id="form-bulbs">
         <form action="" class="form-container-bulbs">
             <h1>This Reminds Me Of Thing Will Would Always say</h1>
@@ -92,48 +115,48 @@
     <button class="open-button" onclick="openForm()"></button>
     <div class="form-popup" id="bookName">
         <form action="" class="form-container">
-            <h1>I Should Figure Out these Lights First</h1>
+            <h1>I Should Head To The Basement And Check The Circuit Breaker</h1>
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
     </div>
 
 
-    <button class="basement-door" onclick="openForm()"></button>
-    <div class="letters">
-        <h1 style="color: black; font-size: 0px; ">M</h1>
+    <a asp-controller="Home" asp-action="Basement"><button class="basement-door"></button></a>
+    @* <div class="letters">
+        <h1>M</h1>
     </div>
     <div class="letters2">
-        <h1 style="color: black; font-size: 0px; ">I</h1>
+        <h1>I</h1>
     </div>
     <div class="letters3">
-        <h1 style="color: black; font-size: 0px; ">C</h1>
+        <h1>C</h1>
     </div>
     <div class="letters4">
-        <h1 style="color: black; font-size: 0px; ">H</h1>
+        <h1>H</h1>
     </div>
     <div class="letters5">
-        <h1 style="color: black; font-size: 0px; ">A</h1>
+        <h1>A</h1>
     </div>
     <div class="letters6">
-        <h1 style="color: black; font-size: 0px; ">E</h1>
+        <h1>E</h1>
     </div>
     <div class="letters7">
-        <h1 style="color: black; font-size: 0px; ">L</h1>
+        <h1>L</h1>
     </div>
     <div class="letters8">
-        <h1 style="color: black; font-size: 0px; ">C</h1>
+        <h1>C</h1>
     </div>
     <div class="letters9">
-        <h1 style="color: black; font-size: 0px; ">H</h1>
+        <h1>H</h1>
     </div>
     <div class="letters10">
-        <h1 style="color: black; font-size: 0px; ">O</h1>
+        <h1>O</h1>
     </div>
     <div class="letters11">
-        <h1 style="color: black; font-size: 0px; ">I</h1>
-    </div>
+        <h1>I</h1>
+    </div> *@
     <audio src="~/assets/LivingRoom.mp3" type="audio/mpeg" autoplay loop></audio>
-    <script src="~/js/LivingRoom.js" asp-append-version="true"></script>
+    <script src="~/js/LivingRoomDark.js" asp-append-version="true"></script>
 </body>
 
 </html>

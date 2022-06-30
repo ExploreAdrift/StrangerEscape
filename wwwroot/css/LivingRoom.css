@@ -11,6 +11,83 @@ body{
     background-repeat: no-repeat;
 }
 
+/* this is for the safe */
+
+
+.open-Safe{
+    height: 14.5%;
+    width: 48.6%;
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    bottom: calc(2.8% - 75px/2);
+    left: calc(25.25% - 75px/2);
+    cursor: pointer;
+    border-radius: 40%;
+}
+
+.form-Safe{
+    display: none;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.form-container-Safe .cancel {
+    background-color: red;
+}
+
+#calculator{
+    background-color:rgb(34,34,34) ;
+    width:fit-content ;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.row1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.row1 button{
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    padding: 10px 18px;
+    margin: 10px;
+    /* border-radius: 50%; */
+    border: 0px;
+    font-size: 30px;
+    background-color: rgb(102,102,102);
+    color: white;
+}
+
+.operator{
+    background-color: rgb(106, 255, 0);
+}
+
+#equals{
+    background-color: rgb(204,204,204);
+    color: rgb(34,34,34);
+    width: 100%;
+    border-radius:25px;
+}
+
+#display{
+    
+    background-color: rgb(66, 2, 168);
+    font-family: 'Orbitron', sans-serif;
+    text-align: end;
+    color: limegreen;
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    
+}
+
 /* this is for the light bulb riddle */
 .open-bulbs{
     height: 5.5%;
@@ -42,6 +119,35 @@ body{
 }
 
 
+/* this is for bookshelf riddle */
+.open-Paper{
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    bottom: calc(45.3% - 75px/2);
+    left: calc(12.25% - 75px/2);
+    cursor: pointer;
+}
+
+.form-Paper{
+    background-color: rgba(246, 232, 226, 0.896);
+    color: rgb(150, 5, 2);
+    text-align: center;
+    text-align: center;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(5, 161, 213);
+}
+
+.form-container-Paper .cancel {
+    background-color: red;
+}
+
 
 /* this is for the bookshelf */
 .open-button{
@@ -56,11 +162,17 @@ body{
 }
 
 .form-popup{
+    background-color: rgb(26,11,4);
+    color: rgb(242,232,117);
+    text-align: center;
     text-align: center;
     display: none;
     position: fixed;
-    left: 45%;
-    bottom: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .form-container .cancel {

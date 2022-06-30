@@ -82,10 +82,46 @@ public class HomeController : Controller
         return View("LivingRoom");
     }
 
+    [HttpGet("LivingRoomDark")]
+    public IActionResult LivingRoomDark()
+    {
+        return View("LivingRoomDark");
+    }
+
+    [HttpGet("LivingRoom2")]
+    public IActionResult LivingRoom2()
+    {
+        return View("LivingRoom2");
+    }
+
+    [HttpGet("LivingRoom3")]
+    public IActionResult LivingRoom3()
+    {
+        return View("LivingRoom3");
+    }
+
+    [HttpGet("LivingRoom4")]
+    public IActionResult LivingRoom4()
+    {
+        return View("LivingRoom4");
+    }
+
     [HttpGet("Basement")]
     public IActionResult Basement()
     {
         return View("Basement");
+    }
+
+    [HttpGet("BasementLight")]
+    public IActionResult BasementLight()
+    {
+        return View("BasementLight");
+    }
+
+    [HttpGet("BasementFinal")]
+    public IActionResult BasementFinal()
+    {
+        return View("BasementFinal");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,3 +1,11 @@
+// this is fot dark living room flash light
+function trackMouse(event) {
+    document.documentElement.style.setProperty("--cursorXpos", `${event.clientX}px`);
+    document.documentElement.style.setProperty("--cursorYpos", `${event.clientY}px`);
+}
+document.addEventListener("mousemove", trackMouse);
+
+
 // this is for the safe
 
 function openFormSafe() {
@@ -7,16 +15,6 @@ function openFormSafe() {
 function closeFormSafe() {
     document.getElementById("form-Safe").style.display = "none";
 }
-
-// this is for the bookshelf riddle
-function openPaper() {
-    document.getElementById("Paper").style.display = "block";
-}
-
-function closePaper() {
-    document.getElementById("Paper").style.display = "none";
-}
-
 
 let disp = "";
 
@@ -63,7 +61,7 @@ function closeFormBulbs() {
 
 const letters = document.querySelector(".letters")
 
-function onDrag({movementX, movementY}){
+function onDrag({ movementX, movementY }) {
     let getStyle = window.getComputedStyle(letters);
 
     // getting left and top values of letters and parsing string to integer or number
@@ -75,19 +73,19 @@ function onDrag({movementX, movementY}){
 }
 
 // could isolate part that is able to activate drag but changing letters
-letters.addEventListener("mousedown", ()=>{
+letters.addEventListener("mousedown", () => {
     letters.classList.add("active");
     letters.addEventListener("mousemove", onDrag)
 });
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     letters.classList.remove("active");
     letters.removeEventListener("mousemove", onDrag)
 });
 
 const letters2 = document.querySelector(".letters2")
 
-function onDrag2({movementX, movementY}){
+function onDrag2({ movementX, movementY }) {
     let getStyle = window.getComputedStyle(letters2);
 
     // getting left and top values of letters2 and parsing string to integer or number
@@ -99,19 +97,19 @@ function onDrag2({movementX, movementY}){
 }
 
 // could isolate part that is able to activate drag but changing letters
-letters2.addEventListener("mousedown", ()=>{
+letters2.addEventListener("mousedown", () => {
     letters2.classList.add("active2");
     letters2.addEventListener("mousemove", onDrag2)
 });
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     letters2.classList.remove("active2");
     letters2.removeEventListener("mousemove", onDrag2)
 });
 
 const letters3 = document.querySelector(".letters3")
 
-function onDrag3({movementX, movementY}){
+function onDrag3({ movementX, movementY }) {
     let getStyle = window.getComputedStyle(letters3);
 
     // getting left and top values of letters3 and parsing string to integer or number
@@ -123,19 +121,19 @@ function onDrag3({movementX, movementY}){
 }
 
 // could isolate part that is able to activate drag but changing letters
-letters3.addEventListener("mousedown", ()=>{
+letters3.addEventListener("mousedown", () => {
     letters3.classList.add("active3");
     letters3.addEventListener("mousemove", onDrag3)
 });
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     letters3.classList.remove("active3");
     letters3.removeEventListener("mousemove", onDrag3)
 });
 
 const letters4 = document.querySelector(".letters4")
 
-function onDrag4({movementX, movementY}){
+function onDrag4({ movementX, movementY }) {
     let getStyle = window.getComputedStyle(letters4);
 
     // getting left and top values of letters4 and parsing string to integer or number
@@ -147,19 +145,19 @@ function onDrag4({movementX, movementY}){
 }
 
 // could isolate part that is able to activate drag but changing letters
-letters4.addEventListener("mousedown", ()=>{
+letters4.addEventListener("mousedown", () => {
     letters4.classList.add("active4");
     letters4.addEventListener("mousemove", onDrag4)
 });
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     letters4.classList.remove("active4");
     letters4.removeEventListener("mousemove", onDrag4)
 });
 
 const letters5 = document.querySelector(".letters5")
 
-function onDrag5({movementX, movementY}){
+function onDrag5({ movementX, movementY }) {
     let getStyle = window.getComputedStyle(letters5);
 
     // getting left and top values of letters5 and parsing string to integer or number
@@ -171,19 +169,19 @@ function onDrag5({movementX, movementY}){
 }
 
 // could isolate part that is able to activate drag but changing letters
-letters5.addEventListener("mousedown", ()=>{
+letters5.addEventListener("mousedown", () => {
     letters5.classList.add("active5");
     letters5.addEventListener("mousemove", onDrag5)
 });
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     letters5.classList.remove("active5");
     letters5.removeEventListener("mousemove", onDrag5)
 });
 
 const letters6 = document.querySelector(".letters6")
 
-function onDrag6({movementX, movementY}){
+function onDrag6({ movementX, movementY }) {
     let getStyle = window.getComputedStyle(letters6);
 
     // getting left and top values of letters6 and parsing string to integer or number
@@ -195,19 +193,19 @@ function onDrag6({movementX, movementY}){
 }
 
 // could isolate part that is able to activate drag but changing letters
-letters6.addEventListener("mousedown", ()=>{
+letters6.addEventListener("mousedown", () => {
     letters6.classList.add("active6");
     letters6.addEventListener("mousemove", onDrag6)
 });
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     letters6.classList.remove("active6");
     letters6.removeEventListener("mousemove", onDrag6)
 });
 
 const letters7 = document.querySelector(".letters7")
 
-function onDrag7({movementX, movementY}){
+function onDrag7({ movementX, movementY }) {
     let getStyle = window.getComputedStyle(letters7);
 
     // getting left and top values of letters7 and parsing string to integer or number
@@ -219,19 +217,19 @@ function onDrag7({movementX, movementY}){
 }
 
 // could isolate part that is able to activate drag but changing letters
-letters7.addEventListener("mousedown", ()=>{
+letters7.addEventListener("mousedown", () => {
     letters7.classList.add("active7");
     letters7.addEventListener("mousemove", onDrag7)
 });
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     letters7.classList.remove("active7");
     letters7.removeEventListener("mousemove", onDrag7)
 });
 
 const letters8 = document.querySelector(".letters8")
 
-function onDrag8({movementX, movementY}){
+function onDrag8({ movementX, movementY }) {
     let getStyle = window.getComputedStyle(letters8);
 
     // getting left and top values of letters8 and parsing string to integer or number
@@ -243,19 +241,19 @@ function onDrag8({movementX, movementY}){
 }
 
 // could isolate part that is able to activate drag but changing letters
-letters8.addEventListener("mousedown", ()=>{
+letters8.addEventListener("mousedown", () => {
     letters8.classList.add("active8");
     letters8.addEventListener("mousemove", onDrag8)
 });
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     letters8.classList.remove("active8");
     letters8.removeEventListener("mousemove", onDrag8)
 });
 
 const letters9 = document.querySelector(".letters9")
 
-function onDrag9({movementX, movementY}){
+function onDrag9({ movementX, movementY }) {
     let getStyle = window.getComputedStyle(letters9);
 
     // getting left and top values of letters9 and parsing string to integer or number
@@ -267,19 +265,19 @@ function onDrag9({movementX, movementY}){
 }
 
 // could isolate part that is able to activate drag but changing letters
-letters9.addEventListener("mousedown", ()=>{
+letters9.addEventListener("mousedown", () => {
     letters9.classList.add("active9");
     letters9.addEventListener("mousemove", onDrag9)
 });
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     letters9.classList.remove("active9");
     letters9.removeEventListener("mousemove", onDrag9)
 });
 
 const letters10 = document.querySelector(".letters10")
 
-function onDrag10({movementX, movementY}){
+function onDrag10({ movementX, movementY }) {
     let getStyle = window.getComputedStyle(letters10);
 
     // getting left and top values of letters10 and parsing string to integer or number
@@ -291,19 +289,19 @@ function onDrag10({movementX, movementY}){
 }
 
 // could isolate part that is able to activate drag but changing letters
-letters10.addEventListener("mousedown", ()=>{
+letters10.addEventListener("mousedown", () => {
     letters10.classList.add("active10");
     letters10.addEventListener("mousemove", onDrag10)
 });
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     letters10.classList.remove("active10");
     letters10.removeEventListener("mousemove", onDrag10)
 });
 
 const letters11 = document.querySelector(".letters11")
 
-function onDrag11({movementX, movementY}){
+function onDrag11({ movementX, movementY }) {
     let getStyle = window.getComputedStyle(letters11);
 
     // getting left and top values of letters11 and parsing string to integer or number
@@ -316,12 +314,12 @@ function onDrag11({movementX, movementY}){
 
 
 // could isolate part that is able to activate drag but changing letters
-letters11.addEventListener("mousedown", ()=>{
+letters11.addEventListener("mousedown", () => {
     letters11.classList.add("active11");
     letters11.addEventListener("mousemove", onDrag11)
 });
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     letters11.classList.remove("active11");
     letters11.removeEventListener("mousemove", onDrag11)
 });
@@ -615,12 +613,3 @@ light11.addEventListener("click", function () {
     }
 })
 
-function trackMouse(event) {
-    document.documentElement.style.setProperty(
-        '--cursorXpos', `${event.clientX}px`
-    )
-    document.documentElement.style.setProperty(
-        '--cursorYpos', `${event.clientY}px`
-    )
-}
-document.addEventListener('mousemove', trackMouse)

@@ -13,6 +13,26 @@ function closeFormLights() {
   document.getElementById("basementlights").style.display = "none";
 }
 
+
+// this is for the fort when you dont have access 
+function openFort() {
+  document.getElementById("fort").style.display = "block";
+}
+
+function closeFort() {
+  document.getElementById("fort").style.display = "none";
+}
+
+// this is for the door when they cant leave
+function openLivingRoomDoor() {
+  document.getElementById("LivingRoomDoor").style.display = "block";
+}
+
+function closeLivingRoomDoor() {
+  document.getElementById("LivingRoomDoor").style.display = "none";
+}
+
+
 // this is to track the value of the light switch riddle clicks
 let hiddenSwitchFormValue = "";
 
