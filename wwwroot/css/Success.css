@@ -132,3 +132,62 @@ span:hover {
 .spacing {
     letter-spacing: 8px;
 }
+
+.One,.Two,.Three,.Four,.Five,.Six,.Seven,.Eight,.Nine,.Ten{
+ font-family: 'ITC Benguiat W01';
+ text-decoration: none;
+ color: white;
+ font-size: 24 ;
+ font-weight: 100;
+ position: relative;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+
+.One{
+  animation: fadeIn 2s;
+  
+}
+.Two{
+  animation: fadeIn 3s;
+}
+.Three{
+  animation: fadeIn 5s;
+}
+.Four{
+  animation: fadeIn 10s;
+}
+.Five{
+  animation: fadeIn 15s;
+}
+.Six{
+  animation: fadeIn 20s;
+}
+.Seven{
+  animation: fadeIn 25s;
+}
+.Eight{
+  animation: fadeIn 30s;
+}
+.Nine{
+  animation: fadeIn 40s;
+}
+.Ten{
+  animation: fadeIn 50s;
+}
+ .red{
+  color: #ed2b12;
+ }
+
+ h2{
+  letter-spacing: 5px;
+ }
+
+ .Eleven{
+  animation: fadeIn 50s;
+ }
+
+ .Twelve{
+  animation: fadeIn 80s;
+ }

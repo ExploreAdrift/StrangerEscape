@@ -8,5 +8,39 @@ body{
 form{
     position: absolute;
     top: calc(49%);
-    left: calc(44%);
+    left: calc(43%);
+}
+
+@keyframes fadeIn{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+.Two{
+  animation: fadeIn 3s;
+}
+.Three{
+  animation: fadeIn 5s;
+}
+.Four{
+  animation: fadeIn 10s;
+}
+.Five{
+  animation: fadeIn 15s;
+}
+.Six{
+  animation: fadeIn 20s;
+}
+.Seven{
+  animation: fadeIn 25s;
+}
+.Eight{
+  animation: fadeIn 30s;
+}
+.Nine{
+  animation: fadeIn 40s;
+}
+.Ten{
+  animation: fadeIn 50s;
 }
