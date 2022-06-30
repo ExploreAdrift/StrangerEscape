@@ -23,12 +23,17 @@
     @* this is for the fort when it cant be opened *@
     <button class="open-fort" onclick="openFort()"></button>
     <div class="form-fort" id="fort">
-        <form action="" class="form-containerFort">
-            <h1>Shes Hungry, I shouldnt Bother her. <br></h1>
+        <div class="form-containerFort">
+            <img src="../img/Eleven.jpeg" alt="">
+            <h1>At The Mere Smell Of The Waffles, She Emerges.</h1>
+            <p>She Scarfs Down The Waffles With Intesne Vigor. There's A Look In Her Eyes That Says</p>
+            <p>"I'm Ready For War"</p>
+            <h1>To Be Continued!</h1>
+            <p></p>
             <div class="d-flex justify-content-center gap-5 mt-3">
-                <button type="button" class="btn btn-danger" onclick="closeFort()">Close</button>
+                <a asp-controller="Home" asp-action="Success"><button class="btn btn-warning">Proceed</button></a>
             </div>
-        </form>
+        </div>
     </div>
 
     <button class="LivingRoomDoor" onclick="openFormLights()"></button>

@@ -1,0 +1,12 @@
+body{
+    background-image: url("../img/JumpScare.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+
+form{
+    position: absolute;
+    top: calc(49%);
+    left: calc(44%);
+}
