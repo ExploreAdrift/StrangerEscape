@@ -79,12 +79,27 @@
                                 class="st-things-g">p</span><span class="st-things-s">e</span></p>
 
                     </div>
-                    <div class="fs-5 tags Twelve text-center">
-                        <a href="/LivingRoom" class="tagsColor">PROCEED</a>
-                    </div>
+                    <form asp-controller="Home" asp-action="LivingRoom" method="get" style="position: absolute;">
+                        <fieldset>
+                            <legend>Select a Difficulty:</legend>
+                            <div>
+                                <input type="radio" name="difficulty" value="Easy">
+                                <label for="huey">Basically Eleven</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="difficulty" value="Medium">
+                                <label for="Medium">Scared But Okay</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="difficulty" value="Hard">
+                                <label for="Hard">We're Out of Waffles, Its Bad</label>
+                            </div>
+                        </fieldset>
 
-
-
+                        <div class="fs-5 tags Twelve text-center">
+                            <button type="submit" class="tagsColor">PROCEED</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
